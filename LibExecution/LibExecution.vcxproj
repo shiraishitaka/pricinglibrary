@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D8B5A3C7-261B-4223-BED1-E0786A1D6D3B}</ProjectGuid>
+    <ProjectGuid>{85725C6C-B85D-417E-9CA7-841FB06EABE4}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>PricingLib</RootNamespace>
+    <RootNamespace>LibExecution</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -104,7 +104,7 @@
       <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -147,22 +147,19 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LibObject.h" />
-    <ClInclude Include="NoArbitrage.h" />
-    <ClInclude Include="PricerEngine.h" />
-    <ClInclude Include="EngineGenerator.h" />
-    <ClInclude Include="RandomNumber.h" />
+    <ClCompile Include="DataLoader.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LibObject.cpp" />
-    <ClCompile Include="NoArbitrage.cpp" />
-    <ClCompile Include="PricerEngine.cpp" />
-    <ClCompile Include="EngineGenerator.cpp" />
-    <ClCompile Include="RandomNumber.cpp" />
+    <ClInclude Include="DataLoader.h" />
+    <ClInclude Include="Main.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibExecution\LibExecution.vcxproj">
-      <Project>{85725c6c-b85d-417e-9ca7-841fb06eabe4}</Project>
+    <ProjectReference Include="..\Helper2\Helper2.vcxproj">
+      <Project>{12cd4bd0-d15e-4f49-a182-2f5b25622498}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\PricingLib2\PricingLib2.vcxproj">
+      <Project>{b6b2ac70-6809-42b2-a011-053a24d9d1a3}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
