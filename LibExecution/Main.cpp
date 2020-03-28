@@ -20,7 +20,7 @@ int main()
 	auto prices = pricer_engine->getResult<std::unordered_map<double, std::shared_ptr<Results>>>();
 	for (const auto& rho: rhos) {
 		std::cout << "rho:" << rho
-			<< "price:" << prices.at(rho)<< std::endl;
+			<< "price:" << prices.at(rho)->prices[0]<< std::endl;
 	}
 
 	return 0;

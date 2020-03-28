@@ -47,17 +47,19 @@ namespace Lib {
 
 		for (const auto& rho : rhos_) {
 			auto random_under_path = random_underlying_paths_[rho];
-			for (size_t t = ; t >= 0; t--) {
+			std::vector<double> price;
+			for (size_t t = ; t >= 0; t--) {//Œã‘Þ
+				for (size_t i = 0; i < ; i++) {
 
-				auto wait_value = ;
-				auto exe_value = Math::max(random_under_path[t][i] - strike_, 0.0);
-				(exe_value > wait_value) ? exe_value : wait_value;
+					auto wait_value = ;
+					auto exe_value = Math::max(random_under_path[t][i] - strike_, 0.0);
+					price[t] = (exe_value > wait_value) ? exe_value : wait_value;
 
-
-
+				}
 			}
-
-			result->corr_prices
+			Results result;
+			//result.expiry_time = expiry_time;
+			result.prices = price;
 			results_.emplace(rho, result);
 		}
 	}

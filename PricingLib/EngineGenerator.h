@@ -9,7 +9,8 @@ namespace Lib {
 	};
 
 	struct Results {
-		std::unordered_map<double, double> corr_prices;
+		int expiry_time;
+		std::vector<double> prices;
 	};
 
 	class Engine : public LibObject {
