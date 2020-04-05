@@ -10,7 +10,7 @@ int main()
 	auto rhos = data_loader->getRhos();
 
 	//Lib‚É“n‚·
-	auto engine = Lib::generateEngine(Lib::ResultType::Corr_Price, constant_data);
+	auto engine = Lib::generateEngine(Lib::Engine::ResultType::Corr_Price, constant_data);
 	auto pricer_engine = std::dynamic_pointer_cast<Lib::PricerEngine>(engine);//mainŠÖ”‚Å‚ÍƒLƒƒƒXƒg‚Í‹–‚·
 	pricer_engine->setRhos(rhos);
 	//pricer_engine->initilize();

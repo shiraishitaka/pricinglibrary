@@ -4,10 +4,6 @@
 
 namespace Lib {
 
-	enum ResultType {
-		Corr_Price
-	};
-
 	struct Results {
 		double rhos;
 		int expiry_time;
@@ -15,6 +11,10 @@ namespace Lib {
 	};
 
 	class Engine : public LibObject {
+	public:
+		enum ResultType {
+			Corr_Price
+		};
 	protected:
 		Engine() : LibObject() {};
 		virtual ~Engine() {};
