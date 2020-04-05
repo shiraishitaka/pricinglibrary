@@ -1,5 +1,5 @@
 #pragma once
-#include "../Helper/AllStandardLib.h"
+#include "../HelperLib/AllStandardLib.h"
 #include "LibObject.h"
 
 namespace Lib {

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D8B5A3C7-261B-4223-BED1-E0786A1D6D3B}</ProjectGuid>
+    <ProjectGuid>{FD288BCA-F1FF-4749-8B74-8A2EE2FDDCAB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>PricingLib</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -45,7 +45,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -137,7 +137,7 @@
       <PrecompiledHeaderFile />
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -147,7 +147,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GeneralEngine.h" />
     <ClInclude Include="LibObject.h" />
+    <ClInclude Include="Math.h" />
     <ClInclude Include="NoArbitrage.h" />
     <ClInclude Include="PricerEngine.h" />
     <ClInclude Include="EngineGenerator.h" />
@@ -155,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LibObject.cpp" />
+    <ClCompile Include="Math.cpp" />
     <ClCompile Include="NoArbitrage.cpp" />
     <ClCompile Include="PricerEngine.cpp" />
     <ClCompile Include="EngineGenerator.cpp" />

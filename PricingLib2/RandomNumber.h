@@ -8,8 +8,9 @@ namespace Lib {
 			int separate_per_year;
 			int years;
 			int iteration_num;
+			double dt;
 		};
 
-		std::vector<std::vector<double>> createPath(RandomParameter random_parameter);
+		std::vector<std::vector<double>> createPath(std::shared_ptr<RandomParameter> random_parameter);
 	}
 }

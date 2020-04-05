@@ -147,20 +147,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DataLoader.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataLoader.h" />
     <ClInclude Include="Main.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Helper2\Helper2.vcxproj">
-      <Project>{12cd4bd0-d15e-4f49-a182-2f5b25622498}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\PricingLib2\PricingLib2.vcxproj">
-      <Project>{b6b2ac70-6809-42b2-a011-053a24d9d1a3}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

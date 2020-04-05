@@ -1,5 +1,5 @@
 #pragma once
-#include "../Helper/AllStandardLib.h"
+#include "../HelperLib/AllStandardLib.h"
 
 namespace Lib {
 
@@ -8,9 +8,9 @@ namespace Lib {
 		LibObject() : update_(false) {};
 		virtual ~LibObject() {};
 
-		void operator->();
+		//void operator->();
 		bool update_;
 	public:
-		void initilize();
+		//void initilize();
 	};
 }

@@ -16,14 +16,14 @@ namespace Helper {
 		NameResolver(InitialUnderlyingNotional, "INITIALUNDERLYINGNOTIONAL");
 	}
 
-	namespace Path{
+	namespace Path {
 		NameResolver(Actual, "ACTUAL");
 		NameResolver(Underlying, "UNDERLYING");
 	}
 
 	namespace Result {
 		NameResolver(Corr, "CORR");
-		NameResolver(Price,"PRICE");
+		NameResolver(Price, "PRICE");
 	}
 }
 
