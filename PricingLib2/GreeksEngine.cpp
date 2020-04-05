@@ -5,7 +5,7 @@
 
 namespace Lib {
 
-	GreeksEngine::GreeksEngine(std::shared_ptr<Tools::DataLoader::Record> constant_param)
+	GreeksEngine::GreeksEngine(const std::shared_ptr<Tools::DataLoader::Record> constant_param)
 		:Engine(),
 		gamma_(constant_param->gamma),
 		mu_(constant_param->mu),

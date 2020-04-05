@@ -10,10 +10,10 @@ namespace Lib {
 	class PricerEngine : public Engine {
 	public:
 
-		PricerEngine(std::shared_ptr<Tools::DataLoader::Record> constant_param);
+		PricerEngine(const std::shared_ptr<Tools::DataLoader::Record> constant_param);
 		~PricerEngine() {};
 
-		void setRhos(std::vector<double> rhos) { rhos_ = rhos; };
+		void setRhos(const std::vector<double> rhos) { rhos_ = rhos; };
 		void calculate() override;
 		
 		std::vector<Results> getResults() const override { return results_; };

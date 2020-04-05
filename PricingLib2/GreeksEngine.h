@@ -10,7 +10,7 @@ namespace Lib {
 	class GreeksEngine : public Engine {
 	public:
 
-		GreeksEngine(std::shared_ptr<Tools::DataLoader::Record> constant_param);
+		GreeksEngine(const std::shared_ptr<Tools::DataLoader::Record> constant_param);
 		~GreeksEngine() {};
 
 		void setRhos(std::vector<double> rhos) { rhos_ = rhos; };
