@@ -1,5 +1,6 @@
 #pragma once
 #include "LibObject.h"
+#include "../HelperLib/DataLoader.cpp"
 
 namespace Lib {
 

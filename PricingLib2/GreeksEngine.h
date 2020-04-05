@@ -7,15 +7,15 @@ namespace Lib {
 		struct RandomParameter;
 	}
 
-	class PricerEngine : public Engine {
+	class GreeksEngine : public Engine {
 	public:
 
-		PricerEngine(std::shared_ptr<Tools::DataLoader::Record> constant_param);
-		~PricerEngine() {};
+		GreeksEngine(std::shared_ptr<Tools::DataLoader::Record> constant_param);
+		~GreeksEngine() {};
 
 		void setRhos(std::vector<double> rhos) { rhos_ = rhos; };
 		void calculate() override;
-		
+
 		std::vector<Results> getResults() const override { return results_; };
 	private:
 		void initialize();

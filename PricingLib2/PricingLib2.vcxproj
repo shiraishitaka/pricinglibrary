@@ -148,6 +148,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneralEngine.h" />
+    <ClInclude Include="GreeksEngine.h" />
     <ClInclude Include="LibObject.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="NoArbitrage.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="RandomNumber.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GreeksEngine.cpp" />
     <ClCompile Include="LibObject.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="NoArbitrage.cpp" />
