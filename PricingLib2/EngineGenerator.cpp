@@ -2,11 +2,11 @@
 
 namespace Lib {
 
-	std::shared_ptr<Engine> generateEngine(Engine::ResultType result_type, std::shared_ptr<Tools::DataLoader::Record> record)
+	std::shared_ptr<Engine> generateEngine(const Engine::ResultType result_type, const std::unique_ptr<Tools::DataLoader::Record>& record)
 	{		
 		switch (result_type) {
 		case Engine::ResultType::Corr_Price: {
-			auto engine_ptr = std::make_shared<PricerEngine>(record);
+			auto engine_ptr = std::make_shared<PricerEngine>((std::unique_ptr<Tools::DataLoader::Record>&)record);
 			return engine_ptr;
 		}
 		default:

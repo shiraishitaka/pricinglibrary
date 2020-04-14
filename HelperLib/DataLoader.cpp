@@ -13,4 +13,7 @@ namespace Tools {
 		double actual_init_notional{ 1.0 };
 		double underlying_init_notional{ 1.0 };
 	};
+
+	DataLoader::DataLoader() :record_(std::unique_ptr<Record>{new Record{}}) {};
+	const std::unique_ptr<DataLoader::Record>& DataLoader::getConstantParameter() { return record_; };
 }

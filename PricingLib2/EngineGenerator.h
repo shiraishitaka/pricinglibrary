@@ -3,5 +3,5 @@
 
 namespace Lib {
 
-	std::shared_ptr<Engine> generateEngine(Engine::ResultType result_type, std::shared_ptr<Tools::DataLoader::Record> record);
+	std::shared_ptr<Engine> generateEngine(const Engine::ResultType result_type, const std::unique_ptr<Tools::DataLoader::Record>& record);
 }

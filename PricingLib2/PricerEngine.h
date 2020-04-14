@@ -10,7 +10,7 @@ namespace Lib {
 	class PricerEngine : public Engine {
 	public:
 
-		PricerEngine(const std::shared_ptr<Tools::DataLoader::Record> constant_param);
+		PricerEngine(const std::unique_ptr<Tools::DataLoader::Record>& constant_param);
 		~PricerEngine() {};
 
 		void setRhos(const std::vector<double> rhos) { rhos_ = rhos; };
